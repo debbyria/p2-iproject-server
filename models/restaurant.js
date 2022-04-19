@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Reviews extends Model {
+  class Restaurant extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,35 +11,36 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Restaurant.belongsTo(models.Category)
+      Restaurant.belongsToMany(models.User, { through: 'Reviews' })
     }
   }
-  Reviews.init({
-    UserId: {
-      type: DataTypes.INTEGER,
+  Restaurant.init({
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notNull: {
           args: true,
-          msg: "User Id is required"
+          msg: "Name is required"
         }
       }
     },
-    visitDate: DataTypes.DATE,
-    comment: DataTypes.TEXT,
+    address: DataTypes.STRING,
     imageUrl: DataTypes.STRING,
-    RestaurantId: {
+    CategoryId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         notNull: {
           args: true,
-          msg: "Restaurant Id is required"
+          msg: "Category Id is required"
         }
       }
     }
   }, {
     sequelize,
-    modelName: 'Reviews',
+    modelName: 'Restaurant',
   });
-  return Reviews;
+  return Restaurant;
 };
