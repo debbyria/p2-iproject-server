@@ -1,6 +1,5 @@
 const { Op } = require("sequelize");
 let { Restaurant } = require("../models/index")
-// const sdk = require('api')('@fsq-docs/v1.0#14d4602hl16yojbt');
 const axios = require('axios')
 
 
@@ -59,8 +58,22 @@ class restaurantController {
   static async allRestaurants(req, res, next) {
     try {
       let key = process.env.AUTH_KEY_4SQUARE
+      let { location, keyword } = req.query
+      let query = "?categories=13000&limit=20"
 
-      let response = await axios.get('https://api.foursquare.com/v3/places/search?categories=13000&near=Jakarta&limit=10', {
+      if (location) {
+        query += `&near=${location}`
+      }
+      if (keyword) {
+        for (let i = 0; i < keyword.length; i++) {
+          if (keyword[i] === " ") {
+            keyword[i] = "%20"
+          }
+        }
+        query += `&query=${keyword}`
+      }
+
+      let response = await axios.get(`https://api.foursquare.com/v3/places/search${query}`, {
         headers: {
           "Accept": "application/json",
           "Authorization": key
@@ -90,7 +103,10 @@ class restaurantController {
         results[i].imageUrl = `${res.data[0].prefix}original${res.data[0].suffix}`
       }
 
-      res.status(200).json(results)
+      res.status(200).json({
+        totalPage: Math.ceil(results.length / 9),
+        results
+      })
     } catch (err) {
       res.status(401).json({
         message: "We got an error here"
