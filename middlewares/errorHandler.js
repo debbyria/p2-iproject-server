@@ -13,11 +13,19 @@ function errorHandler(err, req, res, next) {
         message: errors
       });
       break;
+    case "USER_NOT_FOUND":
+      res.status(401).json({
+        message: "Email or Password Invalid"
+      })
+      break;
+    case "Authentication failed":
+      res.status(401).json({
+        message: "Authentication failed"
+      });
+      break;
     default:
       res.status(500).json({
-        error: {
-          message: "Internal Server Error",
-        },
+        message: "Internal Server Error"
       });
   }
 }
