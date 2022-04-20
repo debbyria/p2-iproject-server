@@ -20,16 +20,12 @@ function errorHandler(err, req, res, next) {
       break;
     case "Authentication failed":
       res.status(401).json({
-        error: {
-          message: "Authentication failed",
-        },
+        message: "Authentication failed"
       });
       break;
     default:
       res.status(500).json({
-        error: {
-          message: "Internal Server Error",
-        },
+        message: "Internal Server Error"
       });
   }
 }

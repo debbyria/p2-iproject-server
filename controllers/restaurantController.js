@@ -92,9 +92,9 @@ class restaurantController {
 
       res.status(200).json(results)
     } catch (err) {
-      if (err.message:)
-      res.status(401).json(err)
-      console.log(err)
+      res.status(401).json({
+        message: "We got an error here"
+      })
     }
   }
 }
