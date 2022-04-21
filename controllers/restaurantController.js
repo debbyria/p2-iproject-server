@@ -50,7 +50,6 @@ class restaurantController {
       }
       res.status(200).json(result)
     } catch (err) {
-      console.log(err)
       next(err)
     }
   }
@@ -58,19 +57,11 @@ class restaurantController {
   static async allRestaurants(req, res, next) {
     try {
       let key = process.env.AUTH_KEY_4SQUARE
-      let { location, keyword } = req.query
+      let { location } = req.query
       let query = "?categories=13000&limit=20"
 
       if (location) {
         query += `&near=${location}`
-      }
-      if (keyword) {
-        for (let i = 0; i < keyword.length; i++) {
-          if (keyword[i] === " ") {
-            keyword[i] = "%20"
-          }
-        }
-        query += `&query=${keyword}`
       }
 
       let response = await axios.get(`https://api.foursquare.com/v3/places/search${query}`, {
@@ -92,7 +83,6 @@ class restaurantController {
           "longitude": element.geocodes.main.longitude
         })
       });
-
       for (let i = 0; i < results.length; i++) {
         let res = await axios.get(`https://api.foursquare.com/v3/places/${results[i].fsq_id}/photos`, {
           headers: {
@@ -100,6 +90,7 @@ class restaurantController {
             "Authorization": key
           }
         })
+
         results[i].imageUrl = `${res.data[0].prefix}original${res.data[0].suffix}`
       }
 
@@ -108,9 +99,7 @@ class restaurantController {
         results
       })
     } catch (err) {
-      res.status(401).json({
-        message: "We got an error here"
-      })
+      next(err)
     }
   }
 }

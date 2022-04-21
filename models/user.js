@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.belongsToMany(models.Restaurant, { through: 'Reviews' })
+      User.hasMany(models.Recipe)
     }
   }
   User.init({

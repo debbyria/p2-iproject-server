@@ -1,5 +1,6 @@
 const axios = require('axios')
 const secretKey = process.env.SPOON_KEY
+const { Recipe } = require("../models/index")
 
 class recipeController {
   static async getParamsRecipe(req, res, next) {
@@ -31,6 +32,44 @@ class recipeController {
         "totalPage": Math.ceil(results.length / 9),
         results
       })
+    } catch (err) {
+      res.status(404).json({
+        message: "Data Not Found"
+      })
+    }
+  }
+
+  static async postFavorite(req, res, next) {
+    try {
+      let idUser = req.user.id
+      let { name, imageUrl, youtubeUrl } = req.body
+
+      let data = Recipe.create({
+        UserId: idUser,
+        name,
+        imageUrl,
+        youtubeUrl
+      })
+
+      res.status(201).json({
+        favId: data.id,
+        name
+      })
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  static async getFavoriteRecipes(req, res, next) {
+    try {
+      let idUser = req.user.id
+
+      let data = await Recipe.findAll({
+        where: {
+          UserId: idUser
+        }
+      })
+      res.status(200).json(data)
     } catch (err) {
       res.status(404).json({
         message: "Data Not Found"
