@@ -1,7 +1,7 @@
 const { Op } = require("sequelize");
 let { Restaurant } = require("../models/index")
 const axios = require('axios')
-
+const key = process.env.AUTH_KEY_4SQUARE
 
 class restaurantController {
   static async getAllRestaurants(req, res, next) {
@@ -56,7 +56,7 @@ class restaurantController {
 
   static async allRestaurants(req, res, next) {
     try {
-      let key = process.env.AUTH_KEY_4SQUARE
+
       let { location } = req.query
       let query = "?categories=13000&limit=20"
 
@@ -98,6 +98,38 @@ class restaurantController {
         totalPage: Math.ceil(results.length / 9),
         results
       })
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  static async getRestaurantDetail(req, res, next) {
+    try {
+      let { fsqId } = req.params
+      let response = await axios.get(`https://api.foursquare.com/v3/places/${fsqId}`, {
+        headers: {
+          "Accept": "application/json",
+          "Authorization": key
+        }
+      })
+
+      let responsePhoto = await axios.get(`https://api.foursquare.com/v3/places/${fsqId}/photos`, {
+        headers: {
+          "Accept": "application/json",
+          "Authorization": key
+        }
+      })
+
+      let photo = `${responsePhoto.data[0].prefix}original${responsePhoto.data[0].suffix}`
+
+      let data = {
+        imageUrl: photo,
+        name: response.data.name,
+        address: response.data.location.address,
+        locationMap: `https://maps.google.com/maps?q=${response.data.geocodes.main.latitude},${response.data.geocodes.main.longitude}`
+      }
+
+      res.status(200).json(data)
     } catch (err) {
       next(err)
     }

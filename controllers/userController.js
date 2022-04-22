@@ -1,5 +1,6 @@
 const { checkPassWithHash, tokenFromPayload } = require("../helpers/helper")
 const { User } = require("../models/index")
+const nodemailer = require('nodemailer')
 
 class userController {
 
@@ -7,6 +8,23 @@ class userController {
     try {
       let { username, email, password } = req.body
       let data = await User.create({ username, email, password })
+
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'pair.projectRD@gmail.com',
+          pass: process.env.NODEMAILER_PASS
+        }
+      })
+
+      const options = {
+        from: 'pair.projectRD@gmail.com',
+        to: data.email,
+        subject: "Welcome to Mogo-Mogo 🎊",
+        text: "Thankyou, you have registered as our member, find your favorite restaurants and recipes here 😊"
+      }
+
+      await transporter.sendMail(options)
 
       res.status(201).json({
         id: data.id,
