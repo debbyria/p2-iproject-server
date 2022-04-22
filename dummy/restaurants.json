@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Tavor Cafe",
+    "address": "Jl. Agung Utara Raya Blok A36D No.30, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/6/18610106/9033c9664b2d814a21ddb111d82ff679.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 1
+  },
+  {
+    "name": "Maketh Coffee & Eatery",
+    "address": "Jl. Danau Agung 2 No. 15A, Sunter, Jakarta 14350",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/4/19177474/1e20522d33bec6f8ad63e62bd0f01f19.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 1
+  },
+  {
+    "name": "Five Monkeys",
+    "address": "Food Centrum, Lantai Ground, Jl. Griya Utama, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/5/7420385/413a8e48d0894e11a6122868dc48b673.png?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 1
+  },
+  {
+    "name": "Six Ounces Coffee",
+    "address": "Jl. Gading Indah Raya, Blok NB 2 No. 1, Kelapa Gading, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/reviews_photos/5b5/f10918c42c55f11292268864ba9bb5b5_1514305428.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 1
+  },
+  {
+    "name": "Kopium Artisan Coffee",
+    "address": "Jl. Summagung I, Blok A4 No. 11, Kelapa Gading, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/5/7423765/09d9d80ade360d470e3e1cf7171cec11_featured_v2.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 1
+  },
+  {
+    "name": "Gocha Gocha",
+    "address": "Jl. Danau Agung II No. 73, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/2/18615392/0a873501ec5f81b17a7cb6cd6249a938.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,* ",
+    "CategoryId": 2
+  },
+  {
+    "name": "Ikkudo Ichi",
+    "address": "Sunter Icon Food Point, Jl. Griya Sejahtera, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/9/7400809/cb7dc745c208d923be6f44f40b578354.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 2
+  },
+  {
+    "name": "Genki Sushi",
+    "address": "Sunter Mall, Lantai 1, Jl. Danau Sunter Utara, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/9/7400809/cb7dc745c208d923be6f44f40b578354.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 2
+  },
+  {
+    "name": "Marugame Udon",
+    "address": "Jl. Danau Sunter Utara, Blok A No.13, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/5/7403755/9dc1a04a124d6ff1ed1aa0c53556fe44_featured_v2.jpeg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 2
+  },
+  {
+    "name": "Ramen Ya!",
+    "address": "Sunter Mall, Lantai 3, Jl. Danau Sunter Utara, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/reviews_photos/976/4e5cba5fe4600c33f15d7357d8f60976_1537608131.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 2
+  },
+  {
+    "name": "Ssikkek Korean BBQ",
+    "address": "Jl. Yos Sudarso, Unit 01-02 No. 84, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/5/18082165/ef938bf71d911020c745d1f0e446a010_featured_v2.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 3
+  },
+  {
+    "name": "Mr. Dakgalbi",
+    "address": "Mall Kelapa Gading 1&2, Lantai 1, Jl. Kelapa Gading Boulevard, Kelapa Gading, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/reviews_photos/939/4b5e8755720470d828005f3286363939_1515333631.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 3
+  },
+  {
+    "name": "Born Ga",
+    "address": "Jl. Boulevard Barat Raya, Blok LC 6 No. 56 - 57, Kelapa Gading, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/6/7401466/8e72650c9270986830762a28dbdff6fc_featured_v2.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 3
+  },
+  {
+    "name": "Kyochon",
+    "address": "Mall Kelapa Gading 2, Lantai 2, Jl. Kelapa Gading Boulevard, Kelapa Gading, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/5/7400565/086c4191c929095d1fbebdd506f95b9d.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 3
+  },
+  {
+    "name": "Omija",
+    "address": "Mall Artha Gading, Lantai Ground, Jl. Boulevard Artha Gading, Kelapa Gading, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/5/18441215/26cac61e5a0f40708f5f9593d4de7b44.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 3
+  },
+  {
+    "name": "Gerobak Betawi",
+    "address": "Ruko Sunter Paradise, Blok R, Jl. Danau Sunter Utara No. 51-52, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/6/7408636/789a6717c7a1c02a81f63dc9d4cd6da5_featured_v2.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 4
+  },
+  {
+    "name": "Sate Khas Senayan",
+    "address": "Jl. Danau Sunter Utara, Blok D 1/7, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/5/7400765/74db0e328f72f3edfa871cb116e3a2c8_featured_v2.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 4
+  },
+  {
+    "name": "Sop Buntut Ibu Henny",
+    "address": "Ruko Taman Sunter Indah, Jl. Sunter Indah, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/3/18136753/bbf8d6ec3f68e4c60f59687a2c34bc09_featured_v2.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 4
+  },
+  {
+    "name": "Little Ubud",
+    "address": "Ruko Sunter Paradise No. 41 Jl. Danau Sunter, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/7/7408127/65e6410bea94e6c5a6b77d9d113eca0a.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 4
+  },
+  {
+    "name": "Dapur Solo",
+    "address": "Jl. Danau Sunter Utara Blok R No. 35-37, Sunter, Jakarta",
+    "imageUrl": "https://b.zmtcdn.com/data/pictures/chains/7/7407907/ed8f5b82ca3b7ec6f515d21cc9623116.png?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*",
+    "CategoryId": 4
+  }
+]
