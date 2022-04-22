@@ -62,6 +62,8 @@ class restaurantController {
 
       if (location) {
         query += `&near=${location}`
+      } else {
+        query += `&near=Jakarta`
       }
 
       let response = await axios.get(`https://api.foursquare.com/v3/places/search${query}`, {
@@ -126,7 +128,7 @@ class restaurantController {
         imageUrl: photo,
         name: response.data.name,
         address: response.data.location.address,
-        locationMap: `https://maps.google.com/maps?q=${response.data.geocodes.main.latitude},${response.data.geocodes.main.longitude}`
+        locationMap: `https://maps.google.com/maps?q=${response.data.geocodes.main.latitude},${response.data.geocodes.main.longitude}&output=embed`
       }
 
       res.status(200).json(data)
